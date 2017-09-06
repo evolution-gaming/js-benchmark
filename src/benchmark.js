@@ -1,4 +1,10 @@
-(() => {
+runJsBenchmark();
+
+function runJsBenchmark() {
+    if (document.querySelector('.fps-panel')) {
+        return;
+    }
+
     let style = document.createElement('style');
     style.innerText = `
         .fps-panel {
@@ -154,6 +160,7 @@
 
     function closeFPS() {
         isEnabledFPS = false;
+        document.head.removeChild(style);
         document.body.removeChild($fpsPanel);
     }
-})();
+}
