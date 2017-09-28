@@ -110,8 +110,12 @@ function runJsBenchmark() {
             $fpsValue.innerText = 'FPS: ' + frameCount.FPS;
             fpsHistory.push(frameCount.FPS);
         }
-        let memory = (performance.memory.usedJSHeapSize / 1048576).toFixed(1);
-        $memoryValue.innerText = `RAM: ${memory} MB`;
+
+        if (performance.memory) {
+            let memory = (performance.memory.usedJSHeapSize / 1048576).toFixed(1);
+            $memoryValue.innerText = `RAM: ${memory} MB`;
+        }
+
         window.requestAnimationFrame(() => frameCount(startTime));
     }
 
