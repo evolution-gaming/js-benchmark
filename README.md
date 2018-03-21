@@ -27,7 +27,7 @@ File **lib/benchmark.js** is ready to use.
 ```javascript
 (function () {
     var script = document.createElement('script');
-    script.src = 'http://rawgit.com/evolution-gaming/js-benchmark/v1.0.2/lib/benchmark.js';
+    script.src = 'https://rawgit.com/evolution-gaming/js-benchmark/v1.0.2/lib/benchmark.js';
     document.head.appendChild(script);
 })();
 ```
@@ -35,5 +35,5 @@ File **lib/benchmark.js** is ready to use.
 ### Bookmarklet
 
 ```javascript
-javascript:(function(){var a=document.createElement('script');a.src='http://rawgit.com/evolution-gaming/js-benchmark/v1.0.2/lib/benchmark.js',document.head.appendChild(a)})();
+javascript:(function(){var a=document.createElement('script');a.src='https://rawgit.com/evolution-gaming/js-benchmark/v1.0.2/lib/benchmark.js',document.head.appendChild(a)})();
 ```
